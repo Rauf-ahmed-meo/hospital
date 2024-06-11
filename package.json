@@ -1,0 +1,23 @@
+{
+  "name": "hospital",
+  "version": "1.0.0",
+  "description": "a web app for hospital",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "hospital"
+  ],
+  "author": "farooq ahmed meo from pakistan",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "mongoose": "^8.4.1"
+  }
+}

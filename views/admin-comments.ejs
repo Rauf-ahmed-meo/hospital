@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Comments</title>
+  <link rel="stylesheet" href="/styles.css">
+  <script>
+    async function deleteComment(commentId) {
+      const response = await fetch(`/comments/delete/${commentId}`, {
+        method: 'POST'
+      });
+      if (response.status === 200) {
+        document.getElementById(`comment-${commentId}`).remove();
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="comments-list">
+    <h1>Comments</h1>
+    <ul>
+      <% comments.forEach(comment => { %>
+        <li id="comment-<%= comment._id %>">
+          <div class="comment-author"><%= comment.author %></div>
+          <div class="comment-text"><%= comment.text %></div>
+          <button onclick="deleteComment('<%= comment._id %>')" class="delete-button">Delete</button>
+        </li>
+      <% }) %>
+    </ul>
+  </div>
+</body>
+</html>

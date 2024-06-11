@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+  <div class="admin-panel">
+    <h1>Admin Panel</h1>
+    <button onclick="window.location.href='/admin/comments'">Comments</button>
+    <button onclick="window.location.href='/admin/doctors'">Manage Doctors</button>
+    <button onclick="window.location.href='/logout'">Logout</button>
+    <form action="/admin/contact" method="POST">
+      <label for="contact">Contact Number:</label>
+      <input type="text" id="contact" name="number" required>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+
+</html>
